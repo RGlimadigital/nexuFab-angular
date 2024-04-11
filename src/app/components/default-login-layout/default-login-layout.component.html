@@ -1,13 +1,20 @@
 <main>
-  <section>
+  <section class="form-section">
     <img src="/assets/svg/nexuFab-logo.svg" alt="" />
-    <h2></h2>
-    <button></button>
-    <div><span>or</span></div>
-    <button></button>
+    <h2>{{ title }}</h2>
+    <ng-content></ng-content>
+    <div class="btn-wrapper">
+      <button class="btn-primary">{{ primaryButtonText }}</button>
+      <div class="divider">
+        <div></div>
+        <span>or</span>
+        <div></div>
+      </div>
+      <button class="btn-secondary">{{ secondaryButtonText }}</button>
+    </div>
   </section>
-  <section>
-    <h2>NexuFab, impulsionando a Inovação.</h2>
-    <img src="/assets/svg/imagem-principal.svg" alt="" />
+  <section class="main-section">
+    <h1>{{ subTitle }}</h1>
+    <img class="main-img" src="/assets/svg/imagem-principal.svg" alt="" />
   </section>
 </main>
