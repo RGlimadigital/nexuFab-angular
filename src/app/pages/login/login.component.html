@@ -3,6 +3,28 @@
   subTitle="NexuFab, impulsionando a Inovação."
   primaryButtonText="Login"
   secondaryButtonText="Cadastro"
+  (submit)="submit()"
+  (navigate)="navigate()"
 >
-  <form [formGroup]="loginForm"></form>
+  <form [formGroup]="loginForm">
+    <app-primary-input
+      formControlName="email"
+      inputName="email"
+      type="email"
+      label="Email"
+      placeholder="seucontato@mail.com"
+    >
+      <img src="/assets/svg/mail.svg" alt="" />
+    </app-primary-input>
+
+    <app-primary-input
+      formControlName="password"
+      inputName="password"
+      type="password"
+      label="Password"
+    >
+      <img src="/assets/svg/cadeado.svg" alt="" />
+    </app-primary-input>
+    <span>Esqueceu sua senha?</span>
+  </form>
 </app-default-login-layout>
